@@ -170,3 +170,7 @@
   font-size: 66px;
   padding-right: 5rem;
 }
+
+a.mdl-navigation__link {
+  text-decoration: none !important;
+}
