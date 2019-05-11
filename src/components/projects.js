@@ -27,76 +27,70 @@ class Projects extends Component {
             return (
                 <div className="projects-grid">
                     {/* Project 1 */}
-                    <Card className="hoverCard" shadow={5} style={{ minWidth: '450', margin: 'auto',border:'1px solid red' }}>
+                    <Card className="hoverCard" shadow={5} style={{ minWidth: '450', margin: 'auto', border: '1px solid red' }}>
                         <CardTitle className="image" style={{ color: '#fff', height: '176px', textTransform: "capitalize", background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} >phone store #1</CardTitle>
                         <CardText>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                   </CardText>
-                  <CardText className="middle">
-                  <div class="text">Under Development</div>
-                  </CardText>
+                        <CardText className="middle">
+                            <div class="text">Under Development</div>
+                        </CardText>
                         <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored disabled>Live Demo</Button>
+                            <Button colored>                       
+                            <a href="https://github.com/ashik71/phone-store-with-react-and-nodejs" rel="noopener noreferrer" target="_blank" style={{ fontSize: '2rem', padding: '2rem' }}>
+                                    <i className="fa fa-github-square" aria-hidden="true" />
+                                </a>  
+                                </Button>
+                    <Button colored disabled>Live Demo</Button>
                         </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    {/* Project 2 */}
-                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} >React Project #2</CardTitle>
+                <CardMenu style={{ color: '#fff' }}>
+                    <IconButton name="share" />
+                </CardMenu>
+                    </Card >
+                {/* Project 2 */ }
+                <Card className="hoverCard" shadow={5} style={{ minWidth: '450', margin: 'auto', border: '1px solid red' }}>
+                        <CardTitle className="image" style={{ color: '#fff', height: '176px', textTransform: "capitalize", background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} >my portfolio #2</CardTitle>
                         <CardText>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                   </CardText>
+                        <CardText className="middle">
+                            <div class="text">Under Development</div>
+                        </CardText>
                         <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored>Live Demo</Button>
+                            <Button colored>                       
+                            <a href="https://github.com/ashik71/myportfolio" rel="noopener noreferrer" target="_blank" style={{ fontSize: '2rem', padding: '2rem' }}>
+                                    <i className="fa fa-github-square" aria-hidden="true" />
+                                </a>  
+                                </Button>
+                    <Button colored disabled>Live Demo</Button>
                         </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    {/* Project 3 */}
-                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-                        <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} >React Project #3</CardTitle>
-                        <CardText>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                  </CardText>
-                        <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored>Live Demo</Button>
-                        </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                </div>
+                <CardMenu style={{ color: '#fff' }}>
+                    <IconButton name="share" />
+                </CardMenu>
+                    </Card >            
+                </div >
             )
 
         }
     }
-    render() {
-        return (
-            <div className="category-tabs">
-                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab>ASP.NET</Tab>
-                    <Tab>React</Tab>
-                </Tabs>
-                <section className="projects-grid">
-                    <Grid className="projects-grid">
-                        <Cell col={12}>
-                            <div className="content">{this.toggoleTabs()}</div>
-                        </Cell>
-                    </Grid>
-                </section>
-            </div>
+render() {
+    return (
+        <div className="category-tabs">
+            <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
+                <Tab>ASP.NET</Tab>
+                <Tab>React</Tab>
+            </Tabs>
+            <section className="projects-grid">
+                <Grid className="projects-grid">
+                    <Cell col={12}>
+                        <div className="content">{this.toggoleTabs()}</div>
+                    </Cell>
+                </Grid>
+            </section>
+        </div>
 
-        )
-    }
+    )
+}
 }
 
 export default Projects;
